@@ -38,7 +38,14 @@
       border-radius: 5px;
       outline: none;
     }
+    .btn{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
+
   .btn{
     button{
       margin-top: 20px;
@@ -62,11 +69,41 @@
       box-shadow: 0 0 10px pink;
       transition-duration: 0.5s;
     }
+
+      .link{
+    color: rgb(255, 195, 205);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    position: relative; /* Necessário para o posicionamento absoluto do pseudo-elemento */
+    display: inline-block; /* Permite que o pseudo-elemento seja posicionado corretamente */
+    padding-bottom: 5px; /* Espaço para a linha */
+  }
+  .link::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Começa com largura zero */
+    height: 3px; /* Espessura da linha */
+    background-color: pink; /* Cor da linha */
+    transition: width 0.3s ease; /* Transição na largura com duração de 0.3s e efeito ease */
+  }
+  .link:hover::after {
+  width: 100%; /* A linha cresce para 100% da largura do link */
+}
   }
 
   .icons{
     display: flex;
     gap: 5px;
+    .btn{
+      button{
+        width: 100%;
+      }
+    }
   }
   img{
     width: 50px;
@@ -100,30 +137,30 @@
     font-weight: 300;
     font-style: normal;
   }
-  .btn{
-    button{
-      margin-top: 20px;
-      background-color: pink;
-      border: 1px solid #fefefe;
-      border-radius: 50px;
-      padding: 5px 20px;
-      width: 150px;
-      font-size: 18px;
-      cursor: pointer;
-      outline: none;
-      color: #fefefe;
-      font-family: "Poppins", sans-serif;
-      font-weight: 200;
-      font-style: normal;
-    }
-    button:hover{
-      background-color: #fefefe;
-      border: 1px solid #fefefe;
-      box-shadow: 0 0 10px #fefefe;
-      color: pink;
-      transition-duration: 0.5s;
-    }
+  .link{
+    color: #fefefe;
+    text-decoration: none;
+    font-size: 40px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    position: relative; /* Necessário para o posicionamento absoluto do pseudo-elemento */
+    display: inline-block; /* Permite que o pseudo-elemento seja posicionado corretamente */
+    padding-bottom: 5px; /* Espaço para a linha */
   }
+  .link::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Começa com largura zero */
+    height: 3px; /* Espessura da linha */
+    background-color: #fefefe; /* Cor da linha */
+    transition: width 0.3s ease; /* Transição na largura com duração de 0.3s e efeito ease */
+  }
+  .link:hover::after {
+  width: 100%; /* A linha cresce para 100% da largura do link */
+}
 }
 
 *{

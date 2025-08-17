@@ -1,7 +1,21 @@
 import styles from './App.module.css'
+import { auth } from "../firebaseConfig";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { Link } from 'react-router-dom';
 
 function App() {
 
+    const loginGoogle = async () => {
+    const provider = new GoogleAuthProvider();
+
+    try {
+      const result = await signInWithPopup(auth, provider);
+
+      console.log("Usuário logado:", result.user);
+    } catch (error) {
+      console.error("Erro ao logar:", error);
+    }
+    };
   return (
     <>
       <div className={styles.container}>
@@ -10,9 +24,9 @@ function App() {
             Sign In
           </h1>
           <div className={styles.icons}>
-          <img src="img/facebook.svg" alt="Facebook" />
-          <img src="img/instagram.svg" alt="Instagram" />
-          <img src="img/twitter.svg" alt="Twitter" />
+            <div className={styles.btn}>
+              <button onClick={loginGoogle}>Entrar com Google</button>
+            </div>
           </div>
           <div className={styles.meio}>
             <h3 className={styles.h3}>
@@ -23,6 +37,11 @@ function App() {
             placeholder='Email'/>
             <input type="password"
             placeholder='Senha' />
+            <div className={styles.btn}>
+              <button>
+                Sign In
+              </button>
+            </div>
             </div>
             </div>
           <div className={styles.baixo}>
@@ -30,9 +49,9 @@ function App() {
             Forgot your password
           </h2>
           <div className={styles.btn}>
-            <button>
-              Sign In
-            </button>
+            <Link className={styles.link} to="/Cadastro">
+              Sign Up
+            </Link>
           </div>
           </div>
         </div>
@@ -42,15 +61,16 @@ function App() {
             Hello, friends
           </h1>
           <h2 className={styles.h2}>Enter Now details and staret joureney with us</h2>
-          <div className={styles.btn}>
-            <button>
-              Sign Up
-            </button>
-          </div>
+          {/* <div className={styles.btn}> */}
+            <Link to="/Cadastro" className={styles.link}>
+              To Start
+            </Link>
+          {/* </div> */}
         </div>
       </div>
     </>
   )
 }
+
 
 export default App
