@@ -10,9 +10,9 @@ function App() {
             Sign In
           </h1>
           <div className={styles.icons}>
-          <img src="/public/img/facebook.svg" alt="Facebook" />
-          <img src="/public/img/instagram.svg" alt="Instagram" />
-          <img src="/public/img/twitter.svg" alt="Twitter" />
+          <img src="public/img/facebook.svg" alt="Facebook" />
+          <img src="public/img/instagram.svg" alt="Instagram" />
+          <img src="public/img/twitter.svg" alt="Twitter" />
           </div>
           <div className={styles.meio}>
             <h3 className={styles.h3}>

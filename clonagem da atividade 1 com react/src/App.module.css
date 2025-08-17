@@ -136,18 +136,19 @@
   height: 100%;
 }
 
-@media (min-width: 0px) and (max-width: 450px){
+@media (min-width: 0px) and (max-width: 1000px){
   .container{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
   *{
     margin-right: 0;
   }
   .esquerda{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -162,13 +163,14 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      width: 90vw;
       input{
         width: 50%;
       }
     }
   }
   .direita{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 
     .h2{
