@@ -1,11 +1,11 @@
 import React from 'react'
 
-function App() {
+function Sobre() {
   return (
     <div>
-      
+      pagina sobre
     </div>
   )
 }
 
-export default App
+export default Sobre
