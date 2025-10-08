@@ -2,7 +2,7 @@ import React from 'react'
 
 function Rodape() {
   return (
-    <div className='flex items-center justify-center p-4 bg-rose-300 shadow-2xl'>
+    <div className='fixed bottom-0 left-0 w-full bg-rose-300 text-white p-4 text-center'>
         <h1>Copyright © 2025 Project of tiago.
 ·
 MIT License

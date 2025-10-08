@@ -43,6 +43,7 @@ const [posts, setPosts] = useState([])
         <iframe width="465" height="250" src="https://www.youtube.com/embed/KvPtIl-Gz2E?list=PLHz_AreHm4dlaTyjolzCFC6IjLzO8O0XV" title="Curso de Segurança da Informação - @Curso em Vídeo - Módulo 0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen className='rounded-xl'></iframe>
             <h1 className='font-bold text-white text-center'>Curso de JavaScript - Teaser</h1>
           </div>
+          <div className="mb-15 mr-15" /> 
         </div>
     </>
       //    <div className='flex gap-2'>
