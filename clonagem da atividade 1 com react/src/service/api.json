@@ -29,6 +29,12 @@
       "nome": "julia",
       "email": "julia@gmail.com",
       "senha": "julia123"
+    },
+    {
+      "id": 6,
+      "nome": "Lucas",
+      "email": "lucas@gmail.com",
+      "senha": "lucas123456"
     }
   ],
   "postsDetail": [
