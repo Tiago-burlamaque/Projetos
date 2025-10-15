@@ -3,6 +3,8 @@ import { Link, Navigate, useNavigate } from "react-router-dom"
 import { useAuth } from "../../context/AuthContext"
 import { toast } from "react-toastify"
 import axios from "axios"
+import Modal from "../../components/Modal/Modal"
+import Registro from "../Registro/Registro"
 
 function Login() {
   const [email, setEmail] = useState("")
@@ -15,16 +17,18 @@ function Login() {
 
   // Função validação de login
 
+  const [isModalOpen ,setIsModalOpen] = useState(false)
+
     const handleLogin = async(e) => {
       e.preventDefault()
 
 
       try {
-        const response = await axios.get('http://localhost:3000/users', {
-        params:{ email, senha }
-        }) 
+        const response = await axios.post('http://localhost:3000/auth/login', {
+         email, senha 
+        })    
         // console.log(response)
-
+        
         if(response.data.length === 0) {
           console.log("Usuário não encontrado")
           toast.error('Usuário não encontrado. Verifique o email e senha', {
@@ -33,15 +37,15 @@ function Login() {
           }) 
           return
         }
-
         login(email)
+        // console.log(response.data) 
         navigate("Home")
         toast.success("Login realizado com sucesso!", {
           autoClose: 3000,
           hideProgressBar: true
         })
       } catch (e) {
-        
+       
       }
 
     }
@@ -62,7 +66,6 @@ function Login() {
             <input
               type="password"
               placeholder="Senha"
-              minLength={8}
               value={senha}
               onChange={(e) => setSenha(e.target.value)}
               className="mt-5 w-100 border rounded-lg p-2 outline-none mb-6 flex"
@@ -75,14 +78,17 @@ function Login() {
               <h2 className="mt-2 mb-2 text-xl" >Forgot your password</h2>
             </div>
             <div className="flex justify-center items-center">
-              <Link to="cadastro" className="text-rose-300 hover:text-blue-200 hover: hover:duration-300 ease-out">Sign Up</Link>
+            <button className="cursor-pointer" onClick={() => setIsModalOpen(true)}>Criar conta</button>
             </div>
           </form>
+          <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+            <Registro />
+          </Modal>
         </div>
         <div className="w-full md:w-1/2 md:flex flex-col justify-center items-center text-center p-8 bg-rose-300 text-white">
           <h1 className='text-5xl mb-4'>Hello, friends</h1>
           <h2 className="text-xl ">Enter Now details and staret joureney with us</h2>
-          <Link className="hover:text-blue-200 mt-4 text-4xl hover: hover:duration-300 ease-out">To start</Link>
+          {/* <Link to="registro" className="hover:text-blue-200 mt-4 text-4xl hover: hover:duration-300 ease-out">To start</Link> */}
         </div>
       </div>
       {/* <div className={styles.container}>

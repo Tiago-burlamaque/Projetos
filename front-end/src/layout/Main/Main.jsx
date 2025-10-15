@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from "react-router";
 import Header from "../Header/Header";
 import Rodape from "../Rodape/Rodape";
+import Registro from "../../pages/Registro/Registro";
 
 
 export default function Main() {
@@ -12,13 +13,13 @@ export default function Main() {
   return (
     <div>
       {/* Header visível apenas fora da rota de login */}
-      {!isLoginPage && <Header />}
+      {!isLoginPage && <Registro /> && <Header />}
 
       <main className="">
         {/* Corpo das páginas */}
         <Outlet />
         <div className="">
-      {!isLoginPage && <Rodape />}
+      {!isLoginPage && <Registro /> && <Rodape />}
         </div>
       </main>
     </div>
