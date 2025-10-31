@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "nome": "tiago",
+      "email": "tiago@gmail.com",
+      "senha": "tiago123"
+    },
+    {
+      "id": "244c",
+      "email": "futlastf998@gmail.com",
+      "password": "futlast2024"
+    },
+    {
+      "id": "ae41",
+      "email": "eduardaalvesdacruz@gmail.com",
+      "password": "dudaalves"
+    },
+    {
+      "id": "6a9f",
+      "email": "kalineburlamaque@gmail.com",
+      "password": "Tiagofilho8."
+    }
+  ],
+  "course": [
+    {
+      "id": "58af",
+      "nomeCurso": "Curso de Python 3 - Mundo 1: Fundamentos",
+      "status": "Em andamento",
+      "descricao": "curso de programação back-end com python",
+      "linkCurso": "https://www.youtube.com/watch?v=S9uPNppGsGo&list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6"
+    }
+  ]
+}

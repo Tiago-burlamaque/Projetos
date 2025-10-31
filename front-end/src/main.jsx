@@ -15,7 +15,7 @@ import NotFound from './pages/Not found/NotFound';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import Main from './layout/Main/Main';
-import Registro from './pages/Registro/Registro';
+
 
 
 const router = createBrowserRouter([
@@ -23,7 +23,6 @@ const router = createBrowserRouter([
     element: <Main />,
     children: [
       { path: "/", element: <Login />},
-      { path: "registro", element: <Registro />},
       { path: "sobre", element: <Sobre />},
       { path: "Home", element: <Home /> },
       { path: "*", element: <NotFound /> }
