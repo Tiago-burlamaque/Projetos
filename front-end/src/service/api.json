@@ -22,13 +22,5 @@
       "password": "Tiagofilho8."
     }
   ],
-  "course": [
-    {
-      "id": "58af",
-      "nomeCurso": "Curso de Python 3 - Mundo 1: Fundamentos",
-      "status": "Em andamento",
-      "descricao": "curso de programação back-end com python",
-      "linkCurso": "https://www.youtube.com/watch?v=S9uPNppGsGo&list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6"
-    }
-  ]
+  "course": []
 }
